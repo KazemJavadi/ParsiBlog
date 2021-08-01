@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Entity
 {
-    public class Post
+    public class Review
     {
         public long Id { get; set; }
-        public string Title { get; set; }
-        public string ImageUrl { get; set; }
+        public long PostId { get; set; }
+        public string FullName { get; set; }
         public string Text { get; set; }
+        public long ReplyTo { get; set; }
 
         //Relationships
-        public List<PostTag> TagsLink { get; set; }
-        public List<Category> CategoriesLink { get; set; }
+        public Post Post { get; set; }
     }
 }
