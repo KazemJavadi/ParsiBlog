@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Entity
 {
-    public class LanguageLanguageDirectionality
+    class Author
     {
-        public int LanguageId { get; set; }
-        public int LanguageDirectionalityId { get; set; }
     }
 }

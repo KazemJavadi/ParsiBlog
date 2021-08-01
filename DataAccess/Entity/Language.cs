@@ -17,6 +17,6 @@ namespace DataAccess.Entity
         public int DirectionalityId { get; set; }
 
         //Relationships
-        public List<LanguageDirectionality> LanguageDirectionality { get; set; }
+        public LanguageDirectionality LanguageDirectionality { get; set; }
     }
 }

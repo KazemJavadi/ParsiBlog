@@ -13,6 +13,12 @@ namespace DataAccess.Entity
         public string ImageUrl { get; set; }
         public string Text { get; set; }
 
+        public bool IsPublished { get; set; }
+        public DateTime LastEditeDate { get; set; }
+        public DateTime PublishDate { get; set; }
+
+        public bool IsSoftDeleted { get; set; }
+
         //Relationships
         public List<PostTag> TagsLink { get; set; }
         public List<Category> CategoriesLink { get; set; }

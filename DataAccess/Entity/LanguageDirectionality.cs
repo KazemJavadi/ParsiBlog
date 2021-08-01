@@ -12,6 +12,6 @@ namespace DataAccess.Entity
         public string Name { get; set; }
 
         //Relationships
-        public 
+        public List<Language> Languages { get; set; }
     }
 }
