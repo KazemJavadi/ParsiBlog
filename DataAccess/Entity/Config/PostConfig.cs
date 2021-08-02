@@ -13,15 +13,22 @@ namespace DataAccess.Entity.Config
         private const int MaxTitleSize = 500;
         public void Configure(EntityTypeBuilder<Post> builder)
         {
-            builder.Property(post => post.Title).HasMaxLength(500);
-            builder.HasIndex(post => post.Title);
-            builder.Property(post => post.Title).IsRequired(true);
+            builder.HasIndex(p => p.Title);
+            builder.Property(p => p.Title).IsRequired(true);
 
-            builder.Property(post => post.ImageUrl).IsRequired(false);
-            builder.Property(post => post.ImageUrl).HasMaxLength(200); /*guid-datetime-rand.extension*/
-            builder.Property(post => post.ImageUrl).IsUnicode(false);
+            builder.Property(p => p.ImageUrl).IsRequired(false);
+            builder.Property(p => p.ImageUrl).IsUnicode(false);
 
-            builder.Property(post=>post.Text).
+            builder.Property(p => p.Text).IsRequired(true);
+
+            builder.HasIndex(p => p.IsPublished);
+
+            builder.Property(p => p.PublishDate).IsRequired();
+            builder.HasIndex(p => p.PublishDate);
+
+            builder.Property(p => p.LastEditeDate).IsRequired();
+
+            builder.HasIndex(p => p.IsSoftDeleted);
         }
     }
 }
