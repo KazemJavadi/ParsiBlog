@@ -12,12 +12,12 @@ namespace DataAccess.Entity
         public int Id { get; set; }
         public int LanguageId { get; set; }
         [MaxLength(500)]
-        public string Name { get; set; }
+        public string PersianName { get; set; }
+        [MaxLength(500)]
+        public string EnglishName { get; set; }
         public int OrderValue { get; set; }
 
         //Relationships
         public List<PostCategory> PostsLink { get; set; }
-        public List<CategoryTranslation> CategoryTranslations { get; set; }
-        public Language Language { get; set; }
     }
 }

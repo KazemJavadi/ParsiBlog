@@ -12,8 +12,9 @@ namespace DataAccess.Entity.Config
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.Property(c => c.Name).IsRequired();
-            builder.HasIndex(c => c.Name).IsUnique();
+            builder.Property(c => c.PersianName).IsRequired(true);
+            builder.HasIndex(c => c.PersianName).IsUnique();
+
 
             builder.Property(c => c.OrderValue).IsRequired(false);
         }

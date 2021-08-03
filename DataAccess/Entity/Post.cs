@@ -25,5 +25,6 @@ namespace DataAccess.Entity
         //Relationships
         public List<PostTag> TagsLink { get; set; }
         public List<Category> CategoriesLink { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

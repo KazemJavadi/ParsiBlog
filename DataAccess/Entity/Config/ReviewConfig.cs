@@ -12,7 +12,21 @@ namespace DataAccess.Entity.Config
     {
         public void Configure(EntityTypeBuilder<Review> builder)
         {
-            builder.
+            builder
+                .HasOne(r => r.ReplyTo)
+                .WithMany(r => r.Replies)
+                .HasForeignKey(r => r.ReplyToId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            //builder
+            //    .HasOne(r => r.Post)
+            //    .WithMany(p => p.Reviews)
+            //    .HasForeignKey(r => r.PostId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Property(r => r.FullName).IsRequired();
+            builder.Property(r => r.Text).IsRequired();
+            builder.Property(r => r.IP).IsRequired();
         }
     }
 }

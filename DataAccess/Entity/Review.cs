@@ -16,11 +16,17 @@ namespace DataAccess.Entity
 
         [MaxLength(200)]
         public string FullName { get; set; }
+        [MaxLength(320)]
+        public string Email { get;set; }
+        [MaxLength(1000)]
         public string Text { get; set; }
-        public bool IsGuest { get; set; }
+        [MaxLength(50)]
+        public string IP { get; set; }
 
         //Relationships
         public Post Post { get; set; }
-        public List<Review> Replays { get; set; }
+        
+        public Review ReplyTo { get; set; }
+        public List<Review> Replies { get; set; }
     }
 }

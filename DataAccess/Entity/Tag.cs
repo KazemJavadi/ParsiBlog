@@ -9,10 +9,10 @@ namespace DataAccess.Entity
     public class Tag
     {
         public long Id { get; set; }
-        public string Text { get; set; }
+        public string EnglishText { get; set; }
+        public string PersianText { get; set; }
 
         //Relationships
         public List<PostTag> PostsLink { get; set; }
-        public List<TagTranslation> TagTranslations { get; set; }
     }
 }
