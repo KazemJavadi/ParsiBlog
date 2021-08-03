@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Entity.Config
 {
-    class PostTabConfig : IEntityTypeConfiguration<PostTag>
+    class PostTagConfig : IEntityTypeConfiguration<PostTag>
     {
         public void Configure(EntityTypeBuilder<PostTag> builder)
         {

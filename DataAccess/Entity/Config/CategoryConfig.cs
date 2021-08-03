@@ -12,11 +12,12 @@ namespace DataAccess.Entity.Config
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.Property(c => c.PersianName).IsRequired(true);
             builder.HasIndex(c => c.PersianName).IsUnique();
+            builder.HasIndex(c => c.EnglishName).IsUnique();
+            builder.HasIndex(c => new { c.PersianName, c.EnglishName }).IsUnique();
 
-
-            builder.Property(c => c.OrderValue).IsRequired(false);
+            builder.HasCheckConstraint($"CHK_{nameof(Category.PersianName)}_{nameof(Category.EnglishName)}",
+                $"{nameof(Category.PersianName)} is not null or {nameof(Category.EnglishName)} is not null");
         }
     }
 }
