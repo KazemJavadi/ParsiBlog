@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Entity.Config
 {
@@ -23,10 +18,6 @@ namespace DataAccess.Entity.Config
             //    .WithMany(p => p.Reviews)
             //    .HasForeignKey(r => r.PostId)
             //    .OnDelete(DeleteBehavior.Cascade);
-
-            builder.Property(r => r.FullName).IsRequired();
-            builder.Property(r => r.Text).IsRequired();
-            builder.Property(r => r.IP).IsRequired();
         }
     }
 }

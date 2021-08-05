@@ -13,13 +13,17 @@ namespace DataAccess.Entity
     {
         public long Id { get; set; }
         [MaxLength(500)]
+        [Required]
         public string Title { get; set; }
         [MaxLength(200)] /*guid-datetime-rand.extension*/
         public string ImageUrl { get; set; }
+        [Required]
         public string Text { get; set; }
 
         public bool IsPublished { get; set; }
+        [Required]
         public DateTime PublishDate { get; set; }
+        [Required]
         public DateTime LastEditeDate { get; set; }
 
         public bool IsSoftDeleted { get; set; }

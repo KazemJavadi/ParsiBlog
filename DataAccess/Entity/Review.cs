@@ -15,12 +15,15 @@ namespace DataAccess.Entity
         public long PostId { get; set; }
 
         [MaxLength(200)]
+        [Required]
         public string FullName { get; set; }
         [MaxLength(320)]
         public string Email { get;set; }
         [MaxLength(1000)]
+        [Required]
         public string Text { get; set; }
         [MaxLength(50)]
+        [Required]
         public string IP { get; set; }
 
         //Relationships

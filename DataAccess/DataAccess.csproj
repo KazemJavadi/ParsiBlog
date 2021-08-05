@@ -12,8 +12,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entity\Config\Extension\" />
-  </ItemGroup>
-
 </Project>
