@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "kazemjavadi.ir": {
+    "ParsiBlog": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

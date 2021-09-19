@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "kazemjavadi.ir\Presentation.csproj", "{AC02AD1C-3FE1-4F77-9C4F-5CD2C590317F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "ParsiBlog\Presentation.csproj", "{AC02AD1C-3FE1-4F77-9C4F-5CD2C590317F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{6B632682-F727-4365-8894-1D2D6E537B64}"
 EndProject

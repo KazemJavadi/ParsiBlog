@@ -13,7 +13,7 @@ namespace DataAccess
         AppDbContext IDesignTimeDbContextFactory<AppDbContext>.CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder optionBuilder = new DbContextOptionsBuilder();
-            optionBuilder.UseSqlServer($@"server=.\mssqlserver20191;database=kazemjavadi.ir;user id=sa;password=2019");
+            optionBuilder.UseSqlServer($@"server=.\mssqlserver20191;database=ParsiBlog;user id=sa;password=2019");
             return new AppDbContext(optionBuilder.Options);
         }
     }
